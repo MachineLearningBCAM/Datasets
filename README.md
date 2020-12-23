@@ -1,4 +1,4 @@
-# Datasets# Datasets
+# Datasets
 This repository contains some of the common dataset that are used. The datasets available here are - 
 
 ## Datasets with only two classes
@@ -24,16 +24,16 @@ This repository contains some of the common dataset that are used. The datasets 
 9) Image Segmentation (segment.csv)
 10) Vehicle Silhouettes (vehicle.csv)
 
-The datasets are in the data(https://github.com/MachineLearningBCAM/Datasets/data) folder and their description is available in the folder descr(https://github.com/MachineLearningBCAM/Datasets/descr)
+The datasets are in the [data](https://github.com/MachineLearningBCAM/Datasets/data) folder and their description is available in the folder [descr](https://github.com/MachineLearningBCAM/Datasets/descr)
 
 # Example 
 
 The repo also contains some functions in the file load.py to load these datasets as a numpy matrix. The file example.py gives an example of the usage of these functions. You can run that file to load and see the output of any of these datasets by passing the name of the dataset file as the command line argument - 
 
-python example.py <datasetname>
+python example.py datasetname
 
 
 ## Reference
 
-All these datasets are taken from the UCI machine learning repository(https://archive.ics.uci.edu/ml/datasets.php)
+All these datasets are taken from the UCI machine learning [repository](https://archive.ics.uci.edu/ml/datasets.php)
 
