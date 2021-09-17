@@ -10,6 +10,7 @@ This repository contains some of the common dataset that are used. The datasets 
 5) Indian Liver Patient (indianLiverPatient.csv)
 6) Magic (magic.csv)
 7) Mammographic (mammographic.csv)
+8) Pulsar (pulsar.csv) - Only data
 
 ## Datasets with multiple classes
 
@@ -23,6 +24,7 @@ This repository contains some of the common dataset that are used. The datasets 
 8) Satellite (satellite.csv)
 9) Image Segmentation (segment.csv)
 10) Vehicle Silhouettes (vehicle.csv)
+11) Pulsar (pulsar.csv) - Only data
 
 The datasets are in the [data](https://github.com/MachineLearningBCAM/Datasets/tree/main/data) folder and their description is available in the folder [descr](https://github.com/MachineLearningBCAM/Datasets/tree/main/descr)
 
