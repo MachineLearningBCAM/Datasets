@@ -11,6 +11,11 @@ This repository contains some of the common dataset that are used. The datasets 
 6) Magic (magic.csv)
 7) Mammographic (mammographic.csv)
 8) Pulsar (pulsar.csv) - Only data
+9) Heart Diseases (heart.csv)
+10) Connectionist Bench (Sonar, Mines vs. Rocks) (sonar.csv)
+11) SVM guide (svmguide3.csv)
+12) Liver Disorder (liver_disorder.csv)
+13) German credit data (german_numer.csv)
 
 ## Datasets with multiple classes
 
@@ -39,5 +44,5 @@ In order to load a dataset, you can call the corresponding function (_load_datas
 
 ## Reference
 
-All these datasets are taken from the UCI machine learning [repository](https://archive.ics.uci.edu/ml/datasets.php)
+These datasets are taken from the UCI machine learning [repository](https://archive.ics.uci.edu/ml/datasets.php) and LIBSVM Data [repository](https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/binary.html)
 

@@ -1,5 +1,5 @@
 from .load import load_adult, load_credit, load_magic, load_diabetes, load_iris, load_vehicle, load_satellite, load_redwine, load_forestcov
-from .load import load_glass, load_haberman, load_mammographic, load_indian_liver, load_segment, load_ecoli, load_optdigits, load_letterrecog
+from .load import load_glass, load_haberman, load_mammographic, load_indian_liver, load_segment, load_ecoli, load_optdigits, load_letterrecog, load_heart, load_liver_disorder, load_sonar, load_svmguide3, load_german_numer
 
 __all__ = ['load_adult',
 		   'load_iris',
@@ -17,4 +17,9 @@ __all__ = ['load_adult',
            'load_glass',
            'load_haberman',
            'load_mammographic',
-           'load_indian_liver']
+           'load_indian_liver',
+           'load_heart',
+           'load_sonar',
+           'load_svmguide3',
+           'load_liver_disorder',
+           'load_german_numer']
