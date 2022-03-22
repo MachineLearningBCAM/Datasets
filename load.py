@@ -4,7 +4,19 @@ import csv
 import numpy as np
 from sklearn.datasets.base import Bunch, load_files, load_data
 
+def normalizeLabels(origY):
+    """
+    Normalize the labels of the instances in the range 0,...r-1 for r classes
+    """
 
+    # Map the values of Y from 0 to r-1
+    domY = np.unique(origY)
+    Y = np.zeros(origY.shape[0], dtype=int)
+
+    for i, y in enumerate(domY):
+        Y[origY == y] = i
+
+    return Y
 
 def load_adult(return_X_y=False):
     """Load and return the adult incomes prediction dataset (classification).
@@ -1055,3 +1067,277 @@ def load_indian_liver(return_X_y=False):
                                 'Total Protiens',
                                 'Albumin',
                                 'A/G Ratio'])
+
+def load_heart(return_X_y=False):
+    """Load and return the Heart Data Set
+    (classification).
+
+    =========================================================
+    Classes                                                 2
+    Samples total                                         270
+    Dimensionality                                         13
+    Features                                       int, float
+    =========================================================
+
+    Parameters
+    ----------
+    return_X_y : boolean, default=False.
+        If True, returns ``(data, target)`` instead of a Bunch object.
+        See below for more information about the `data` and `target` object.
+
+    Returns
+    -------
+    data : Bunch
+        Dictionary-like object, the interesting attributes are:
+        'data', the data to learn, 'target', the classification targets,
+        'DESCR', the full description of the dataset,
+        and 'filename', the physical location of satellite csv dataset.
+
+    (data, target) : tuple if ``return_X_y`` is True
+
+    """
+    module_path = dirname(__file__)
+
+    with open(join(module_path, 'data',
+                   'heart.csv')) as csv_file:
+        data_file = csv.reader(csv_file)
+        target_names = []
+        n_samples = int(270)
+        n_features = int(13)
+        data = np.empty((n_samples, n_features))
+        target = np.empty((n_samples, ), dtype=int)
+
+        for i, ir in enumerate(data_file):
+            data[i] = np.asarray(ir[:-1], dtype=np.float64)
+            target[i] = np.asarray(ir[-1], dtype=int)
+
+    trans = SimpleImputer(strategy='median')
+    data = trans.fit_transform(data)
+
+    if return_X_y:
+        return data, normalizeLabels(target)
+
+    return Bunch(data=data, target=normalizeLabels(target),
+                 target_names=target_names,
+                 DESCR=None,
+                 feature_names=[])
+
+def load_sonar(return_X_y=False):
+    """Load and return the Sonar Data Set
+    (classification).
+
+    =========================================================
+    Classes                                                 2
+    Samples total                                         208
+    Dimensionality                                         60
+    Features                                       int, float
+    =========================================================
+
+    Parameters
+    ----------
+    return_X_y : boolean, default=False.
+        If True, returns ``(data, target)`` instead of a Bunch object.
+        See below for more information about the `data` and `target` object.
+
+    Returns
+    -------
+    data : Bunch
+        Dictionary-like object, the interesting attributes are:
+        'data', the data to learn, 'target', the classification targets,
+        'DESCR', the full description of the dataset,
+        and 'filename', the physical location of satellite csv dataset.
+
+    (data, target) : tuple if ``return_X_y`` is True
+
+    """
+    module_path = dirname(__file__)
+
+    with open(join(module_path, 'data',
+                   'sonar.csv')) as csv_file:
+        data_file = csv.reader(csv_file)
+        target_names = []
+        n_samples = int(208)
+        n_features = int(60)
+        data = []
+        target = []
+
+        for i, ir in enumerate(data_file):
+            # print(float(ir[-1]))
+            if len(ir[1:]) == 60:
+                data.append(np.asarray(ir[1:], dtype=np.float64))
+                target.append(int(ir[0]))
+        data = np.asarray(data)
+        target = np.asarray(target)
+
+    trans = SimpleImputer(strategy='median')
+    data = trans.fit_transform(data)
+
+    if return_X_y:
+        return data, normalizeLabels(target)
+
+    return Bunch(data=data, target=normalizeLabels(target),
+                 target_names=target_names,
+                 DESCR=None,
+                 feature_names=[])
+
+def load_svmguide3(return_X_y=False):
+    """Load and return the SVM guide Data Set
+    (classification).
+
+    =========================================================
+    Classes                                                 2
+    Samples total                                        1243
+    Dimensionality                                         21
+    Features                                       int, float
+    =========================================================
+
+    Parameters
+    ----------
+    return_X_y : boolean, default=False.
+        If True, returns ``(data, target)`` instead of a Bunch object.
+        See below for more information about the `data` and `target` object.
+
+    Returns
+    -------
+    data : Bunch
+        Dictionary-like object, the interesting attributes are:
+        'data', the data to learn, 'target', the classification targets,
+        'DESCR', the full description of the dataset,
+        and 'filename', the physical location of satellite csv dataset.
+
+    (data, target) : tuple if ``return_X_y`` is True
+
+    """
+    module_path = dirname(__file__)
+
+    with open(join(module_path, 'data',
+                   'svmguide3.csv')) as csv_file:
+        data_file = csv.reader(csv_file)
+        target_names = []
+        n_samples = int(1243)
+        n_features = int(21)
+        data = np.empty((n_samples, n_features))
+        target = np.empty((n_samples, ), dtype=int)
+
+        for i, ir in enumerate(data_file):
+            data[i] = np.asarray(ir[1:22], dtype=np.float64)
+            target[i] = np.asarray(ir[0], dtype=int)
+
+    trans = SimpleImputer(strategy='median')
+    data = trans.fit_transform(data)
+
+    if return_X_y:
+        return data, normalizeLabels(target)
+
+    return Bunch(data=data, target=normalizeLabels(target),
+                 target_names=target_names,
+                 DESCR=None,
+                 feature_names=[])
+
+def load_liver_disorder(return_X_y=False):
+    """Load and return the Liver Disorder Data Set
+    (classification).
+
+    =========================================================
+    Classes                                                 2
+    Samples total                                         345
+    Dimensionality                                          5
+    Features                                       int, float
+    =========================================================
+
+    Parameters
+    ----------
+    return_X_y : boolean, default=False.
+        If True, returns ``(data, target)`` instead of a Bunch object.
+        See below for more information about the `data` and `target` object.
+
+    Returns
+    -------
+    data : Bunch
+        Dictionary-like object, the interesting attributes are:
+        'data', the data to learn, 'target', the classification targets,
+        'DESCR', the full description of the dataset,
+        and 'filename', the physical location of satellite csv dataset.
+
+    (data, target) : tuple if ``return_X_y`` is True
+
+    """
+    module_path = dirname(__file__)
+
+    with open(join(module_path, 'data',
+                   'liver_disorder.csv')) as csv_file:
+        data_file = csv.reader(csv_file)
+        target_names = []
+        n_samples = int(345)
+        n_features = int(5)
+        data = np.empty((n_samples, n_features))
+        target = np.empty((n_samples, ), dtype=int)
+
+        for i, ir in enumerate(data_file):
+            data[i] = np.asarray(ir[:-1], dtype=np.float64)
+            target[i] = np.asarray(int(float(ir[-1])), dtype=np.float64)
+
+    trans = SimpleImputer(strategy='median')
+    data = trans.fit_transform(data)
+
+    if return_X_y:
+        return data, normalizeLabels(target)
+
+    return Bunch(data=data, target=normalizeLabels(target),
+                 target_names=target_names,
+                 DESCR=None,
+                 feature_names=[])
+
+def load_german_numer(return_X_y=False):
+    """Load and return the German numer Data Set
+    (classification).
+
+    =========================================================
+    Classes                                                 2
+    Samples total                                        1000
+    Dimensionality                                         24
+    Features                                       int, float
+    =========================================================
+
+    Parameters
+    ----------
+    return_X_y : boolean, default=False.
+        If True, returns ``(data, target)`` instead of a Bunch object.
+        See below for more information about the `data` and `target` object.
+
+    Returns
+    -------
+    data : Bunch
+        Dictionary-like object, the interesting attributes are:
+        'data', the data to learn, 'target', the classification targets,
+        'DESCR', the full description of the dataset,
+        and 'filename', the physical location of satellite csv dataset.
+
+    (data, target) : tuple if ``return_X_y`` is True
+
+    """
+    module_path = dirname(__file__)
+
+    with open(join(module_path, 'data',
+                   'german_numer.csv')) as csv_file:
+        data_file = csv.reader(csv_file)
+        target_names = []
+        n_samples = int(1000)
+        n_features = int(24)
+        data = np.empty((n_samples, n_features))
+        target = np.empty((n_samples, ), dtype=int)
+
+        for i, ir in enumerate(data_file):
+            data[i] = np.asarray(ir[1:], dtype=np.float64)
+            target[i] = np.asarray(ir[0], dtype=int)
+
+    trans = SimpleImputer(strategy='median')
+    data = trans.fit_transform(data)
+
+    if return_X_y:
+        return data, normalizeLabels(target)
+
+    return Bunch(data=data, target=normalizeLabels(target),
+                 target_names=target_names,
+                 DESCR=None,
+                 feature_names=[])
