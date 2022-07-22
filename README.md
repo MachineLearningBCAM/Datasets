@@ -16,6 +16,7 @@ This repository contains some of the common dataset that are used. The datasets 
 11) SVM guide (svmguide3.csv)
 12) Liver Disorder (liver_disorder.csv)
 13) German credit data (german_numer.csv)
+14) Yearbook dataset
 
 ## Datasets with multiple classes
 
