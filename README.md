@@ -36,11 +36,13 @@ The datasets are in the [data](https://github.com/MachineLearningBCAM/Datasets/t
 
 # Example 
 
-The repo also contains some functions in the file load.py to load these datasets as a numpy matrix. The file example.py gives an example of the usage of these functions. You can run that file to load and see the output of any of these datasets by passing the name of the dataset file as the command line argument - 
+The repo also contains some functions in the file `load.py` to load these datasets as a numpy matrix. The file `example.py` gives an example of the usage of these functions. You can run that file to load and see the output of any of these datasets by passing the name of the dataset file as the command line argument - 
 
+```
 python example.py datasetname
+```
 
-In order to load a dataset, you can call the corresponding function (_load_datasetname_) available in the file load.py. For example, to load the dataset adult, you need to call the function _load_adult(True)_. Note: you need to pass _True_ as parameter to the function if you want the function to return the dataset and its labels as numpy matrix and vector respectively.
+In order to load a dataset, you can call the corresponding function (_load_datasetname_) available in the file `load.py`. For example, to load the dataset adult, you need to call the function _load_adult(True)_. Note: you need to pass _True_ as parameter to the function if you want the function to return the dataset and its labels as numpy matrix and vector respectively.
 
 
 ## Reference
