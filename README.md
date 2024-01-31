@@ -42,7 +42,7 @@ The repo also contains some functions in the file `load.py` to load these datase
 python example.py datasetname
 ```
 
-In order to load a dataset, you can call the corresponding function (_load_datasetname_) available in the file `load.py`. For example, to load the dataset adult, you need to call the function _load_adult(True)_. Note: you need to pass _True_ as parameter to the function if you want the function to return the dataset and its labels as numpy matrix and vector respectively.
+In order to load a dataset, you can call the corresponding function (`load_<datasetname>`) available in the file `load.py`. For example, to load the dataset adult, you need to call the function `load_adult(True)`. Note: you need to pass `True` as parameter to the function if you want the function to return the dataset and its labels as numpy matrix and vector respectively.
 
 
 ## Reference
