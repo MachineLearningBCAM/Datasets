@@ -12,8 +12,9 @@ Homepage: https://github.com/zalandoresearch/fashion-mnist
 Number of Instances: 60000 train images, 10000 test images
 
 Attribute Information: 
-    Resnet18 network: The 512 attributes correspond to the second last layer of a ResNet18  model pretrained on ImageNet Data Set used to predict the class of each image on Yearbook dataset. 
-    Regnet_y_400mf network: The 440 attributes correspond to the second last layer of a Regnet_y_400mf model pretrained on ImageNet Data Set used to predict the class of each image on Yearbook dataset.
-    Resnet34 network: The 512 attributes correspond to the second last layer of a ResNet34 model pretrained on ImageNet Data Set used to predict the class of each image on Yearbook dataset.
-    Swin_v2_s network: The 768 attributes correspond to the second last layer of a Swin_v2_s model pretrained on ImageNet Data Set used to predict the class of each image on Yearbook dataset.
+    Resnet18 network: The 512 attributes correspond to the second last layer of a ResNet18  model pretrained on ImageNet Data Set used to predict the class of each image on Fashion Mnist dataset. 
+    Regnet_y_400mf network: The 440 attributes correspond to the second last layer of a Regnet_y_400mf model pretrained on ImageNet Data Set used to predict the class of each image on Fashion Mnist dataset.
+    Resnet34 network: The 512 attributes correspond to the second last layer of a ResNet34 model pretrained on ImageNet Data Set used to predict the class of each image on Fashion Mnist dataset.
+    Swin_v2_s network: The 768 attributes correspond to the second last layer of a Swin_v2_s model pretrained on ImageNet Data Set used to predict the class of each image on Fashion Mnist dataset.
+    ViT_B_16 network: The 768 attributes correspond to the second last layer of a ViT_B_16 model pretrained on ImageNet Data Set used to predict the class of each image on Fashion Mnist dataset.
     
