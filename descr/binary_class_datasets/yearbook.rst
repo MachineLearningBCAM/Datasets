@@ -18,6 +18,7 @@ Attribute Information:
     Regnet_y_400mf network: The 440 attributes correspond to the second last layer of a Regnet_y_400mf model pretrained on ImageNet Data Set used to predict the class of each image on Yearbook dataset.
     Resnet34 network: The 512 attributes correspond to the second last layer of a ResNet34 model pretrained on ImageNet Data Set used to predict the class of each image on Yearbook dataset.
     Swin_v2_s network: The 768 attributes correspond to the second last layer of a Swin_v2_s model pretrained on ImageNet Data Set used to predict the class of each image on Yearbook dataset.
+    ViT_B_16 network: The 768 attributes correspond to the second last layer of a ViT_B_16 model pretrained on ImageNet Data Set used to predict the class of each image on Yearbook dataset.
     
 Missing Attribute Values: None
 
