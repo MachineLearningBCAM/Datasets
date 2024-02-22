@@ -1,6 +1,6 @@
 Title: The Street View House Numbers (SVHN) Dataset
 
-Source: http://ufldl.stanford.edu/housenumbers/
+Source: https://ufldl.stanford.edu/housenumbers/
 
 SVHN is a real-world image dataest for developing machine learning and object recognition algorithms with minimal requirement on data preprocessing and formatting. 
 It can be seen as similar in flavor to MNIST (e.g., the images are of small cropped digits), but incorporates an order of magnitude more labeled date (over 600000 digit images) 
