@@ -7,8 +7,7 @@ It can be seen as similar in flavor to MNIST (e.g., the images are of small crop
 and comes from a significantly harder, unsolved, real world problem (recognizing digits and numbers in natural scene images). 
 EVHN is obtained from house numbers in Google Street View Images. 
   
-Number of Instances: 600000 images, 73257 digits for training, 26032 digits for testing, and 531131 additional, somewhat less difficult samples, 
-to use as extra training data. The format is MNIST-like 32x32 images centered around a single character (many of the images do contain some distractors at the sides)
+Number of Instances: 600000 images, 73257 digits for training, 26032 digits for testing, and 531131 additional, somewhat less difficult samples, to use as extra training data. The format is MNIST-like 32x32 images centered around a single character (many of the images do contain some distractors at the sides)
 
 Attribute Information:
   Resnet18 network: The 512 attributes correspond to the second last layer of a ResNet18 model pretrained on ImageNet Data Set used to predict the class of each image on Svhn Cropped dataset. 
