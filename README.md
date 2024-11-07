@@ -31,6 +31,10 @@ This repository contains some of the common dataset that are used. The datasets 
 9) Image Segmentation (segment.csv)
 10) Vehicle Silhouettes (vehicle.csv)
 11) Pulsar (pulsar.csv) - Only data
+12) DomainNet (domain_4_clases.mat) The “DomainNet” dataset contains six different domains with decreasing realism and the
+goal is to predict if an image is an airplane, bus, ambulance, or police car. The sequence
+of tasks corresponds to the six domains: real, painting, infograph, clipart, sketch, and
+quickdraw.
 
 The datasets are in the [data](https://github.com/MachineLearningBCAM/Datasets/tree/main/data) folder and their description is available in the folder [descr](https://github.com/MachineLearningBCAM/Datasets/tree/main/descr)
 
