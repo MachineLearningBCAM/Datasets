@@ -35,6 +35,7 @@ This repository contains some of the common dataset that are used. The datasets 
 goal is to predict if an image is an airplane, bus, ambulance, or police car. The sequence
 of tasks corresponds to the six domains: real, painting, infograph, clipart, sketch, and
 quickdraw.
+13) Dry bean
 
 The datasets are in the [data](https://github.com/MachineLearningBCAM/Datasets/tree/main/data) folder and their description is available in the folder [descr](https://github.com/MachineLearningBCAM/Datasets/tree/main/descr)
 
