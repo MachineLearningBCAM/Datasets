@@ -77,6 +77,27 @@ def load_adult(return_X_y=False):
                  DESCR=descr_text,
                  filename=data_file_name)
 
+def load_dry_bean():
+	module_path = dirname(__file__)
+
+	data_file_name = join(module_path, 'dry_bean_dataset.csv')
+	with open(data_file_name) as f:
+		data_file = csv.reader(f)
+		temp = next(data_file)
+		n_samples = 13611
+		n_features = 16
+		data = np.empty((n_samples, n_features))
+		target = np.empty((n_samples,), dtype="S20")
+		# temp = next(data_file) # names of features
+		# feature_names = np.array(temp)
+
+		# print(data_file.shape)
+		for i, d in enumerate(data_file):
+			data[i] = np.asarray(d[:-1], dtype=float)
+			target[i] = d[-1]
+
+	return data, normalizeLabels(target)
+
 def load_diabetes(return_X_y=False):
     """Load and return the Pima Indians Diabetes dataset (classification).
 
